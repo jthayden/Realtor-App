@@ -1,15 +1,40 @@
-<form method="POST" action="<TODO: models url here (e.g: /accounts)>?_method=PUT">
+<a href="/agents/{{agent._id}}">Back to agent</a>
 
-  <!--
-    Template for creating input form for a string object key called stringMember
-    NOTE: for numeric input fields use `type="number"`
-  -->
-  <input type="text" value="{{<TODO: model.stringMember>}}" name="<TODO: stringMember (e.g: name)>" />
+<h2>Edit Agent</h2>
 
-  <!--
-    Template for creating input form for a boolean object member
-  -->
-  <input type="checkbox" name="<TODO: booleanMember (e.g: isActive)>" value="true" {{#if <TODO: model.booleanMember (e.g: account.isActive)}}checked{{/if}} />
+<form method="POST" action="/agents/{{agent._id}}?_method=PUT">
 
-  <input type="submit" value="Update Shop" />
+<label for="name">Agent Name:</label>
+<input 
+type="text" 
+name="name" 
+id="name"
+value="{{agent.name}}"
+>
+
+<label for="specialty">Specialty</label>
+<input 
+type="text" 
+name="specialty" 
+id="specialty"
+value="{{agent.specialty}}"
+>
+
+<label for="areas-served">Areas Served:</label>
+<input 
+type="text" 
+name="areasServed" 
+id="areas-served"
+value="{{agent.areasServed}}"
+>
+
+<label for="team">Team:</label>
+<input 
+type="text" 
+name="team" 
+id="team"
+value="{{agent.team}}"
+>
+
+<input type="submit" value="Update Agent" />
 </form>

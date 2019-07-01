@@ -1,0 +1,12 @@
+<h2>All Agents</h2>
+
+<a href="/agents/new">New Agent Form</a>
+
+{{#each agents}}
+<div>
+    <h3><a href="/agents/{{_id}}">{{name}}</a></h3>
+    <p>{{specialty}}</p>
+    <p>{{areasServed}}</p>
+    <p>{{team}}</p>
+</div>
+{{/each}}

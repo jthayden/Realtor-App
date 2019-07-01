@@ -1,0 +1,27 @@
+<a href="/agents/{{agent._id}}">Back to agent</a>
+
+<h2>New Listing</h2>
+
+<form method="POST" action="/listings">
+
+<label for="address">Address></label>
+<input type="text" name="" id="">
+  {{!-- <!--
+    Template for creating input form for a string object key called stringMember
+    NOTE: for numeric input fields use `type="number"`
+  --->
+  <input type="text" value="{{<TODO: model.stringMember (e.g: account.name)}}" placeholder="name" name="<TODO: stringMember (e.g: name)>" />
+
+  <input type="checkbox" name="<TODO: model.booleanMember (e.g: account.isActive)" value="true" /> --}}
+
+  <input type="submit" value="Create Listing" />
+</form>
+
+ address: String,
+    neighborhood: String,
+    beds: Number,
+    baths: Number,
+    squareFootage: Number,
+    price: Number,
+    agentId: mongoose.Types.ObjectId
+})

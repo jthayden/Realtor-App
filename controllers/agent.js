@@ -24,7 +24,7 @@ agentRouter.get('/', (req, res) => {
 agentRouter.post('/', (req, res) => {
     agentApi.addAgent(req.body)
         .then(() => {
-            res.redirect('/agents')
+            res.redirect('agents')
         })
         .catch((err) => {
             res.send(err)

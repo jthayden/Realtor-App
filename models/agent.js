@@ -27,7 +27,7 @@ function addAgent(agentObject) {
     return AgentCollection.create(agentObject)
 }
 
-function getAgent(agendId) {
+function getAgent(agentId) {
     return AgentCollection.findById(agentId)
 }
 

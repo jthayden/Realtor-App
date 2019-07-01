@@ -4,6 +4,7 @@ const express = require('express')
 //Step 2
 //Import the api files from the models
 const agentApi = require('../models/agent.js')
+const listingApi = require('../models/listing.js')
 
 //Step 3 
 //Create a new router.
@@ -24,7 +25,7 @@ agentRouter.get('/', (req, res) => {
 agentRouter.post('/', (req, res) => {
     agentApi.addAgent(req.body)
         .then(() => {
-            res.redirect('agents')
+            res.redirect('/agents')
         })
         .catch((err) => {
             res.send(err)
@@ -45,14 +46,20 @@ agentRouter.get('/:agentId/edit', (req, res) => {
 agentRouter.get('/:agentId', (req, res) => {
     agentApi.getAgent(req.params.agentId)
         .then((agent) => {
-            res.render('agents/singleAgent', { agent })
+            listingApi.getListingByAgentId(agent._id)
+                .then((listing) => {
+                    res.render('agents/singleAgent', { agent, listing })
+                })  
+        })
+        .catch((err) => {
+            res.send(err)
         })
 })
 
 agentRouter.put('/:agentId', (req, res) => {
     agentApi.updateAgent(req.params.agentId, req.body)
         .then(() => {
-            res.redirect('agents')
+            res.redirect('/agents')
         })
         .catch((err) => {
             res.send(err)

@@ -8,6 +8,7 @@ const methodOverride = require('method-override')
 //Step 2
 //Import routers from controllers
 const { agentRouter } = require('./controllers/agent.js')
+const { listingRouter } = require('./controllers/listing.js')
 
 
 //Step 3
@@ -33,10 +34,10 @@ app.use(express.static(__dirname+"/public"))
 //Set the view engine of express to use the hbs (handlebars) package
 app.set('view engine', 'hbs')
 
-
 //Step 4
 //Add router for the application to use. The first argument is a prefix to all the paths defined in the router.
 app.use('/agents', agentRouter)
+app.use('/agents/:agentId/listing', listingRouter)
 
 //Step 5
 //Set the port the server is to run on

@@ -21,6 +21,53 @@ agentRouter.get('/', (req, res) => {
         })
 })
 
+agentRouter.post('/', (req, res) => {
+    agentApi.addAgent(req.body)
+        .then(() => {
+            res.redirect('/agents')
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+})
+
+agentRouter.get('/new', (req, res) => {
+    res.render('agents/newAgentForm')
+})
+
+agentRouter.get('/:agentId/edit', (req, res) => {
+    agentApi.getAgent(req.params.agentId)
+        .then((agent) => {
+            res.render('agents/editAgentForm', { agent })
+        })
+})
+
+agentRouter.get('/:agentId', (req, res) => {
+    agentApi.getAgent(req.params.agentId)
+        .then((agent) => {
+            res.render('agents/singleAgent', { agent })
+        })
+})
+
+agentRouter.put('/:agentId', (req, res) => {
+    agentApi.updateAgent(req.params.agentId, req.body)
+        .then(() => {
+            res.redirect('agents')
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+})
+
+agentRouter.delete('/:agentId', (req, res) => {
+    agentApi.deleteAgent(req.params.agentId)
+        .then(() => {
+            res.redirect('/agents')
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+})
 
 //Step 6
 //Export the router from the file.

@@ -1,0 +1,29 @@
+//Step 1 import express
+const express = require('express')
+
+//Step 2
+//Import the api files from the models
+const agentApi = require('../models/agent.js')
+
+//Step 3 
+//Create a new router.
+const agentRouter = express.Router()
+
+//Step 4
+//Put all request handlers here
+agentRouter.get('/', (req, res) => {
+    agentApi.getAgents()
+        .then((agents) => {
+            res.render('agents/agents', { agents })
+        })
+        .catch((err) => {
+            res.send(err)
+        })
+})
+
+
+//Step 6
+//Export the router from the file.
+module.exports = {
+    agentRouter
+}

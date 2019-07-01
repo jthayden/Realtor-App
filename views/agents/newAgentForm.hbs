@@ -1,12 +1,40 @@
-<form method="POST" action="/<TODO: models url here (e.g: /accounts)>">
+<a href="/agents">Back to all agents</a>
 
-  <!--
-    Template for creating input form for a string object key called stringMember
-    NOTE: for numeric input fields use `type="number"`
-  --->
-  <input type="text" value="{{<TODO: model.stringMember (e.g: account.name)}}" placeholder="name" name="<TODO: stringMember (e.g: name)>" />
+<h1>New Agent</h1>
 
-  <input type="checkbox" name="<TODO: model.booleanMember (e.g: account.isActive)" value="true" />
+<form method="POST" action="/agents>">
+
+  <label for="name">Agent Name:</label>
+  <input 
+  type="text" 
+  name="name" 
+  id="name" 
+  placeholder="name"
+  >
+
+  <label for="specialty">Specialty</label>
+  <input 
+  type="text" 
+  name="specialty" 
+  id="specialty" 
+  placeholder="specialty"
+  >
+
+  <label for="areas-served">Areas Served:</label>
+  <input 
+  type="text" 
+  name="areasServed" 
+  id="areas-served" 
+  placeholder="Areas Served"
+  >
+
+  <label for="team">Team:</label>
+  <input 
+  type="text" 
+  name="team" 
+  id="team" 
+  placeholder="team"
+  >
 
   <input type="submit" value="Create Shop" />
 </form>

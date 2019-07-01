@@ -4,6 +4,10 @@ const listingApi = require('../models/listing.js')
 
 const listingRouter = express.Router({mergeParams: true})
 
+listingRouter.get('/new', (req, res) => {
+    res.render('listings/newListingForm')
+})
+
 listingRouter.post('/', (req, res) => {
     req.body.agentId = req.params.agentId
     listingApi.addListing(req.body)
@@ -15,3 +19,4 @@ listingRouter.post('/', (req, res) => {
 module.exports = {
     listingRouter
 }
+

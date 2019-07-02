@@ -8,8 +8,8 @@ const mongoose = require('./connection.js')
 //Create model schema 
 const AgentSchema = new mongoose.Schema({
  name: String,
- apeciality: String,
- areeasServed: String,
+ specialty: String,
+ areasServed: String,
  team: {}
 })
 

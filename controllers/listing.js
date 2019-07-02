@@ -8,11 +8,11 @@ listingRouter.get('/new', (req, res) => {
     res.render('listings/newListingForm')
 })
 
-listingRouter.post('/', (req, res) => {
+listingRouter.post('/:agentId', (req, res) => {
     req.body.agentId = req.params.agentId
     listingApi.addListing(req.body)
         .then(() => {
-            res.send('Listing Created')
+            res.redirect('/agents')
         })
 })
 

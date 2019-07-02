@@ -10,7 +10,7 @@ listingRouter.get('/new', (req, res) => {
     res.render('agents/newListingForm')
 })
 
-listingRouter.post('/:agentId', (req, res) => {
+listingRouter.post('/', (req, res) => {
     req.body.agentId = req.params.agentId
     listingApi.addListing(req.body)
         .then(() => {

@@ -8,7 +8,7 @@ const listingApi = require('../models/listing.js')
 
 //Step 3 
 //Create a new router.
-const agentRouter = express.Router()
+const agentRouter = express.Router({mergeParams: true})
 
 //Step 4
 //Put all request handlers here

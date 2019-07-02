@@ -36,6 +36,9 @@ app.set('view engine', 'hbs')
 
 //Step 4
 //Add router for the application to use. The first argument is a prefix to all the paths defined in the router.
+app.get('/', (req, res) => {
+    res.redirect('/agents')
+})
 app.use('/agents', agentRouter)
 app.use('/agents/:agentId/listing', listingRouter)
 

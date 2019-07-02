@@ -41,6 +41,7 @@ app.get('/', (req, res) => {
 })
 app.use('/agents', agentRouter)
 app.use('/agents/:agentId/listing', listingRouter)
+app.use('/listings', listingRouter)
 
 //Step 5
 //Set the port the server is to run on

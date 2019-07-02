@@ -4,13 +4,14 @@
 //Import mongoose connection
 const mongoose = require('./connection.js')
 
+// const AgentId = mongoose.Types.ObjectId
 //Step 2
 //Create model schema 
 const AgentSchema = new mongoose.Schema({
  name: String,
  specialty: String,
  areasServed: String,
- team: {}
+ team: {},
 })
 
 //Step 3

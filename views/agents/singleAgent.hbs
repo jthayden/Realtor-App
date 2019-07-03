@@ -7,16 +7,23 @@
 
 <a href="/agents/{{agent._id}}/edit">Edit Agent</a>
 
-<a href="/agents/{{agent._id}}/listing/new">New Listing Form</a>
-
 <form action="/agents/{{agent._id}}?_method=DELETE" method="post">
     <input type="submit" value="Delete Agent">
 </form>
 
+<a href="/agents/{{agent._id}}/listing/new">New Listing Form</a>
+
 <h3>Listings</h3>
 
 <ul>
-    {{#each listings}}
-        <li>{{address}}</li>
+    {{#each listing}}
+        <li>Address: {{address}}</li>
+        <li>Neighborhood: {{neighborhood}}</li>
+        <li>Bedrooms: {{beds}}</li>
+        <li>Bathrooms: {{baths}}</li>
+        <li>Square Footage: {{squareFootage}}</li>
+        <li>Price: {{price}}</li>
     {{/each}}
 </ul>
+
+<a href="/agents/{{agent._id}}/client/new">New Client Form</a>

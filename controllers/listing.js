@@ -4,7 +4,7 @@ const listingApi = require('../models/listing.js')
 const agentApi = require('../models/agent.js')
 
 
-const listingRouter = express.Router({mergeParams: true})
+const listingRouter = express.Router({ mergeParams: true })
 
 listingRouter.get('/', (req, res) => {
     listingApi.getListings()
@@ -17,20 +17,12 @@ listingRouter.get('/', (req, res) => {
 })
 
 listingRouter.get('/new', (req, res) => {
-    // req.body.agentId = req.params.agentId   
     agentApi.getAgent(req.params.agentId)
-    .then((agent) => {
+        .then((agent) => {
             res.render('agents/newListingForm', { agentId: agent._id })
         })
-    
-        })
 
-
-        // agentApi.getAgent(req.params.agentId)
-        // .then((agent) => {
-        //     res.render('agents/editAgentForm', { agent })
-        // })
-
+})
 
 
 
@@ -39,7 +31,7 @@ listingRouter.post('/', (req, res) => {
     // console.log(req.params.agentId)
     listingApi.addListing(req.body)
         .then(() => {
-            res.redirect('/agents/'+req.params.agentId)
+            res.redirect('/agents/' + req.params.agentId)
         })
 })
 

@@ -6,25 +6,31 @@
 <p>Areas Served:{{agent.areasServed}}</p>
 <p>Team:{{agent.team}}</p>
 
+<div class="btn-group" role="group" aria-label="Basic example">
+    <a class="btn btn-outline-secondary" href="/agents/{{agent._id}}/edit">Edit Agent</a>
+    <form action="/agents/{{agent._id}}?_method=DELETE" method="post">
+        <input type="submit" class="btn btn-outline-danger" value="Delete Agent">
+    </form>
+</div>
 
-<a class="btn btn-outline-secondary" href="/agents/{{agent._id}}/edit">Edit Agent</a>
+{{!-- <a class="btn btn-outline-secondary" href="/agents/{{agent._id}}/edit">Edit Agent</a> --}}
 
-<form action="/agents/{{agent._id}}?_method=DELETE" method="post">
+{{!-- <form action="/agents/{{agent._id}}?_method=DELETE" method="post">
     <input type="submit" class="btn btn-outline-danger" value="Delete Agent">
-</form>
-
+</form> --}}
+<br>
 <a class="btn btn-outline-secondary" href="/agents/{{agent._id}}/listing/new">New Listing Form</a>
 
 <h3>Listings</h3>
 
 <ul>
     {{#each listing}}
-        <li>Address: {{address}}</li>
-        <li>Neighborhoods: {{neighborhood}}</li>
-        <li>Bedrooms: {{beds}}</li>
-        <li>Bathrooms: {{baths}}</li>
-        <li>Square Footage: {{squareFootage}}</li>
-        <li>Price: {{price}}</li>
+    <li>Address: {{address}}</li>
+    <li>Neighborhoods: {{neighborhood}}</li>
+    <li>Bedrooms: {{beds}}</li>
+    <li>Bathrooms: {{baths}}</li>
+    <li>Square Footage: {{squareFootage}}</li>
+    <li>Price: {{price}}</li>
     {{/each}}
 </ul>
 
@@ -32,13 +38,13 @@
 
 <ul>
     {{#each client}}
-        <li>Name: {{name}}</li>
-        <li>Property Types: {{propertytypes}}</li>
-        <li>Neighborhoods: {{neighborhoods}}</li>
-        <li>Price Range: {{priceRange}}</li>
-        <li>Beds: {{beds}}</li>
-        <li>Baths: {{baths}}</li>
-        <li>Email: {{email}}</li>
-        <li>Phone: {{phone}}</li>
+    <li>Name: {{name}}</li>
+    <li>Property Types: {{propertyTypes}}</li>
+    <li>Neighborhoods: {{neighborhoods}}</li>
+    <li>Price Range: {{priceRange}}</li>
+    <li>Beds: {{beds}}</li>
+    <li>Baths: {{baths}}</li>
+    <li>Email: {{email}}</li>
+    <li>Phone: {{phone}}</li>
     {{/each}}
 </ul>

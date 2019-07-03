@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 .flip-card {
     background-color: transparent;
     width: 300px;
@@ -11,7 +15,7 @@
     background-color: grey;
     padding: 10px;
     margin: inherit;*/
-    display:inline-flex
+    display:inline-flex;
 }
 
 .flip-card-inner {
@@ -24,7 +28,7 @@
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -42,7 +46,11 @@
 .flip-card-back {
     background-color: dodgerblue;
     color: white;
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
+}
+
+ul {
+    list-style: none;
 }
 
 /* .card:hover {

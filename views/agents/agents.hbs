@@ -1,12 +1,16 @@
 <h2>All Agents</h2>
 
 <a href="/agents/new">New Agent Form</a>
+<br>
 
 {{#each agents}}
-<div>
-    <h3><a href="/agents/{{_id}}">{{name}}</a></h3>
-    <p>{{specialty}}</p>
-    <p>{{areasServed}}</p>
-    <p>{{team}}</p>
+<div class="card">
+    <img src="" alt="placeholder" style="width:100%">
+    <div class="container">
+        <h3><a href="/agents/{{_id}}">{{name}}</a></h3>
+        <h5>{{specialty}}</h5>
+        <h5>{{areasServed}}</h5>
+        <h5>{{team}}</h5>
+    </div>
 </div>
 {{/each}}

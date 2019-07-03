@@ -1,0 +1,29 @@
+<a href="/agents/{{agentId}}">Back to agent</a>
+
+<h2>New Client</h2>
+
+<form method="POST" action="/agents/{{agentId}}/client">
+
+  <label for="name">Address</label>
+  <input type="text" name="name" id="name" placeholder="Name">
+
+  <label for="property-type">Neighborhood</label>
+  <input type="text" name="propertyType" id="property-type" placeholder="Property Type">
+
+  <label for="price-range"></label>
+  <input type="text" name="priceRange" id="price-range" placeholder="Price Range">
+  
+  <label for="beds">Beds</label>
+  <input type="number" name="beds" id="beds" placeholder="Beds">
+
+  <label for="baths">Baths</label>
+  <input type="number" name="baths" id="baths" placeholder="Baths">
+
+  <label for="email">Square Footage</label>
+  <input type="email" name="email" id="email">
+
+  <label for="phone">Price</label>
+ <input type="tel" name="phone" id="phone">
+
+  <input type="submit" value="Create Client" />
+</form>

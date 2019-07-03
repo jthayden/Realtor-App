@@ -4,13 +4,16 @@
 
 <form method="POST" action="/agents/{{agentId}}/client">
 
-  <label for="name">Address</label>
+  <label for="name">Name</label>
   <input type="text" name="name" id="name" placeholder="Name">
 
-  <label for="property-type">Neighborhood</label>
-  <input type="text" name="propertyType" id="property-type" placeholder="Property Type">
+  <label for="property-types">Property Types</label>
+  <input type="text" name="propertyTypes" id="property-types" placeholder="Property Types">
 
-  <label for="price-range"></label>
+<label for="neighborhoods">Neighborhoods</label>
+<input type="text" name="neighborhoods" id="neighborhoods" placeholder="Neighborhoods">
+
+  <label for="price-range">Price Range</label>
   <input type="text" name="priceRange" id="price-range" placeholder="Price Range">
   
   <label for="beds">Beds</label>
@@ -19,10 +22,10 @@
   <label for="baths">Baths</label>
   <input type="number" name="baths" id="baths" placeholder="Baths">
 
-  <label for="email">Square Footage</label>
+  <label for="email">Email</label>
   <input type="email" name="email" id="email">
 
-  <label for="phone">Price</label>
+  <label for="phone">Phone</label>
  <input type="tel" name="phone" id="phone">
 
   <input type="submit" value="Create Client" />

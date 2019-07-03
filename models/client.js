@@ -8,7 +8,8 @@ const mongoose = require('./connection.js')
 //Create model schema 
 const ClientSchema = new mongoose.Schema({
  name: String,
- propertyType: String,
+ propertyTypes: String,
+ neighborhoods: String,
  priceRange: String,
  beds: Number,
  baths: Number,

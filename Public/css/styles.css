@@ -1,21 +1,16 @@
 body {
     text-align: center;
+    background-color: lightgray
 }
 
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
-    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: .3s;
-    width: 195px;
-    height: 300px;
-    background-color: grey;
-    padding: 10px;
-    margin: inherit;*/
     display:inline-flex;
+    margin: inherit
 }
 
 .flip-card-inner {
@@ -44,7 +39,7 @@ body {
 }
 
 .flip-card-back {
-    background-color: dodgerblue;
+    background-color: navy;
     color: white;
     transform: rotateY(180deg);
 }
@@ -52,17 +47,3 @@ body {
 ul {
     list-style: none;
 }
-
-/* .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-    padding: 2px 16px;
-}
-
-.cardPhoto {
-    width: 195px;
-    height: 150px;
-    display: block
-} */

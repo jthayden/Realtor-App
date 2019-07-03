@@ -7,8 +7,7 @@ const ListingSchema = new mongoose.Schema({
     baths: Number,
     squareFootage: Number,
     price: Number,
-    agentId: { type: String, required:true },
-    agentId: mongoose.Schema.Types.ObjectId
+    agentId: { type:mongoose.Types.ObjectId, required:true }
 })
 
 const ListingCollection = mongoose.model('Listing', ListingSchema)
@@ -18,7 +17,7 @@ function getListings() {
   }
 
 function getListingByAgentId(agentId) {
-    return ListingCollection.find({ agentId: agentId })
+    return ListingCollection.find({ agentId: agentId  })
 }
 
 function addListing(listingObject) {

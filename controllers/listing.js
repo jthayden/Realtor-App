@@ -18,10 +18,9 @@ listingRouter.get('/', (req, res) => {
 
 listingRouter.get('/new', (req, res) => {
     // req.body.agentId = req.params.agentId   
-    console.log(req.params.agentId)
     agentApi.getAgent(req.params.agentId)
-    .then((agentId) => {
-            res.render('agents/newListingForm', { agentId: agentId })
+    .then((agent) => {
+            res.render('agents/newListingForm', { agentId: agent._id })
         })
     
         })
@@ -40,7 +39,7 @@ listingRouter.post('/', (req, res) => {
     // console.log(req.params.agentId)
     listingApi.addListing(req.body)
         .then(() => {
-            res.redirect('agents/singleAgent')
+            res.redirect('/agents/'+req.params.agentId)
         })
 })
 

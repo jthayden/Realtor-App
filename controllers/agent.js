@@ -5,6 +5,7 @@ const express = require('express')
 //Import the api files from the models
 const agentApi = require('../models/agent.js')
 const listingApi = require('../models/listing.js')
+const clientApi = require('../models/client.js')
 
 //Step 3 
 //Create a new router.
@@ -48,7 +49,11 @@ agentRouter.get('/:agentId', (req, res) => {
         .then((agent) => {
             listingApi.getListingByAgentId(agent._id)
                 .then((listing) => {
-                    res.render('agents/singleAgent', { agent, listing })
+                    clientApi.getClientByAgentId(agent._id)
+                        .then((client) => {
+                            res.render('agents/singleAgent', { agent, listing, client })
+                        })
+                    
                 })  
         })
         .catch((err) => {

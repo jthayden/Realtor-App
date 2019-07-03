@@ -9,6 +9,7 @@ const methodOverride = require('method-override')
 //Import routers from controllers
 const { agentRouter } = require('./controllers/agent.js')
 const { listingRouter } = require('./controllers/listing.js')
+const { clientRouter } = require('./controllers/client.js')
 
 
 //Step 3
@@ -42,6 +43,7 @@ app.get('/', (req, res) => {
 app.use('/agents', agentRouter)
 app.use('/agents/:agentId/listing', listingRouter)
 app.use('/listings', listingRouter)
+app.use('/agents/:agentId/client', clientRouter)
 
 //Step 5
 //Set the port the server is to run on

@@ -27,3 +27,9 @@
 </ul>
 
 <a href="/agents/{{agent._id}}/client/new">New Client Form</a>
+
+<ul>
+    {{#each client}}
+        <li>Name: {{name}}</li>
+    {{/each}}
+</ul>

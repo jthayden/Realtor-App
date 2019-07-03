@@ -4,7 +4,6 @@
 //Import mongoose connection
 const mongoose = require('./connection.js')
 
-// const AgentId = mongoose.Types.ObjectId
 //Step 2
 //Create model schema 
 const AgentSchema = new mongoose.Schema({

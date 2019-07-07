@@ -20,12 +20,27 @@ function getListingByAgentId(agentId) {
     return ListingCollection.find({ agentId: agentId  })
 }
 
+
 function addListing(listingObject) {
     return ListingCollection.create(listingObject)
+}
+
+function getListing(listingId) {
+    return ListingCollection.findById(listingId)
+}
+
+function updateListing(listingId, listingObject) {
+    return ListingCollection.findByIdAndUpdate(listingId, listingObject)
+}
+
+function deleteAgent(agentId) {
+    return AgentCollection.findByIdAndDelete(agentId)
 }
 
 module.exports = {
     getListingByAgentId,
     addListing,
-    getListings
+    getListings,
+    getListing,
+    updateListing,
 }

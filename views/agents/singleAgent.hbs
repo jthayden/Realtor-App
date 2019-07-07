@@ -1,10 +1,10 @@
-<a class="btn btn-outline-secondary" href="/agents">Back to all agents</a>
+<a class="btn btn-outline-secondary non-group-button" href="/agents">Back to all agents</a>
 <br>
 <img src="https://i.imgur.com/sUN5Yyum.jpg?2" class="img-thumbnail" alt="">
-<h3>{{agent.name}}</h3>
-<p>Specialty:{{agent.specialty}}</p>
-<p>Areas Served:{{agent.areasServed}}</p>
-<p>Team:{{agent.team}}</p>
+<h3 class="agent">{{agent.name}}</h3>
+<p class="agent">Specialty:{{agent.specialty}}</p>
+<p class="agent">Areas Served:{{agent.areasServed}}</p>
+<p class="agent">Team:{{agent.team}}</p>
 
 <div class="btn-group" role="group" aria-label="Basic example">
     <a class="btn btn-outline-secondary" href="/agents/{{agent._id}}/edit">Edit Agent</a>
@@ -19,13 +19,14 @@
     <input type="submit" class="btn btn-outline-danger" value="Delete Agent">
 </form> --}}
 <br>
-<a class="btn btn-outline-secondary" href="/agents/{{agent._id}}/listing/new">New Listing Form</a>
+<a class="btn btn-outline-secondary non-group-button" href="/agents/{{agent._id}}/listing/new">New Listing Form</a>
 
 <h3>Listings</h3>
 
 <ul>
     {{#each listing}}
-    <li>Address: {{address}}</li>
+   
+    <li>Address:<a href="/listings/{{_id}}">{{address}}</a> </li>
     <li>Neighborhoods: {{neighborhood}}</li>
     <li>Bedrooms: {{beds}}</li>
     <li>Bathrooms: {{baths}}</li>
@@ -34,7 +35,7 @@
     {{/each}}
 </ul>
 
-<a class="btn btn-outline-secondary" href="/agents/{{agent._id}}/client/new">New Client Form</a>
+<a class="btn btn-outline-secondary non-group-button" href="/agents/{{agent._id}}/client/new">New Client Form</a>
 
 <ul>
     {{#each client}}

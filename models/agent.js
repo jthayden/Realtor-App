@@ -39,6 +39,7 @@ function deleteAgent(agentId) {
     return AgentCollection.findByIdAndDelete(agentId)
 }
 
+
 //Step 5
 //Export all functions from this file by adding their names as keys to this object
 module.exports = {
@@ -46,6 +47,6 @@ module.exports = {
   addAgent,
   getAgent,
   updateAgent,
-  deleteAgent
+  deleteAgent,
 
 }

@@ -1,15 +1,26 @@
-{{!-- <form method="POST" action="<TODO: models url here (e.g: /accounts)>?_method=PUT">
+<a class="btn btn-outline-secondary non-group-button" href="/agents/{{agentId}}">Back to agent</a>
 
-  <!--
-    Template for creating input form for a string object key called stringMember
-    NOTE: for numeric input fields use `type="number"`
-  -->
-  <input type="text" value="{{<TODO: model.stringMember>}}" name="<TODO: stringMember (e.g: name)>" />
+<h2>New Listing</h2>
 
-  <!--
-    Template for creating input form for a boolean object member
-  -->
-  <input type="checkbox" name="<TODO: booleanMember (e.g: isActive)>" value="true" {{#if <TODO: model.booleanMember (e.g: account.isActive)}}checked{{/if}} />
+<form method="POST" action="/agents/{{agentId}}/listing">
 
-  <input type="submit" value="Update Shop" />
-</form> --}}
+  <label for="address">Address</label>
+  <input type="text" name="address" id="address" placeholder="address">
+
+  <label for="neighborhood">Neighborhood</label>
+  <input type="text" name="neighborhood" id="neighborhood" placeholder="neighborhood">
+
+  <label for="beds">Beds</label>
+  <input type="number" name="beds" id="beds" placeholder="beds">
+
+  <label for="baths">Baths</label>
+  <input type="number" name="baths" id="baths" placeholder="baths">
+
+  <label for="squareFootage">Square Footage</label>
+  <input type="number" name="squareFootage" id="squareFootage" placeholder="squareFootage">
+
+  <label for="price">Price</label>
+  <input type="number" name="price" id="price" placeholder="price">
+<br>
+  <input type="submit" class="btn btn-outline-success non-group-button" value="Create Listing" />
+</form>

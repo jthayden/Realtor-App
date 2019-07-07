@@ -47,3 +47,19 @@ body {
 ul {
     list-style: none;
 }
+
+
+h3.agent-card {
+    font-size: 18px;
+}
+
+h5.agent-card {
+    font-size: 14px;
+}
+
+a.non-group-button {
+    margin: 15px;
+}
+ input.non-group-button {
+     margin: 15px;
+ }

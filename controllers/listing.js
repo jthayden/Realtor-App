@@ -16,16 +16,6 @@ listingRouter.get('/', (req, res) => {
         })
 })
 
-listingRouter.get('/new', (req, res) => {
-    agentApi.getAgent(req.params.agentId)
-        .then((agent) => {
-            res.render('agents/newListingForm', { agentId: agent._id })
-        })
-
-})
-
-
-
 listingRouter.post('/', (req, res) => {
     req.body.agentId = req.params.agentId
     // console.log(req.params.agentId)
@@ -34,6 +24,30 @@ listingRouter.post('/', (req, res) => {
             res.redirect('/agents/' + req.params.agentId)
         })
 })
+
+listingRouter.get('/new', (req, res) => {
+    agentApi.getAgent(req.params.agentId)
+        .then((agent) => {
+            res.render('agents/newListingForm', { agentId: agent._id })
+        })
+
+})
+
+listingRouter.get('/:listingId/edit', (req, res) => {
+    listingApi.getListing(req.params.listingId)
+        .then((listing) => {
+            res.render('agents/editListingForm', { listing })
+        })
+})
+
+listingRouter.get('/:listingId', (req, res) => {
+    listingApi.getListing(req.params.listingId)
+        .then((listing) => {
+            res.render('agents/listing', { listing })
+        })
+})
+
+
 
 module.exports = {
     listingRouter

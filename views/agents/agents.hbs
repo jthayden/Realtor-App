@@ -1,6 +1,6 @@
 <h2>All Agents</h2>
 
-<a class="btn btn-outline-secondary" href="/agents/new">New Agent Form</a>
+<a class="btn btn-outline-secondary non-group-button" href="/agents/new">New Agent Form</a>
 <br>
 
 {{#each agents}}
@@ -11,10 +11,10 @@
                 style="width: 200px; height: 200px">
         </div>
         <div class="flip-card-back">
-            <h3><a href="/agents/{{_id}}">{{name}}</a></h3>
-            <h5>Specialty: {{specialty}}</h5>
-            <h5>Areas Served: {{areasServed}}</h5>
-            <h5>Team: {{team}}</h5>
+            <h3 class="agent-card"><a href="/agents/{{_id}}">{{name}}</a></h3>
+            <h5 class="agent-card">Specialty: {{specialty}}</h5>
+            <h5 class="agent-card">Areas Served: {{areasServed}}</h5>
+            <h5 class="agent-card">Team: {{team}}</h5>
         </div>
     </div>
 </div>

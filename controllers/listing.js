@@ -47,7 +47,19 @@ listingRouter.get('/:listingId', (req, res) => {
         })
 })
 
+listingRouter.put('/:listingId', (req, res) => {
+    listingApi.updateListing(req.params.listingId, req.body)
+        .then(() => {
+            res.redirect('/listings/' + req.params.listingId)
+        })
+})
 
+listingRouter.delete('/:listingId', (req, res) => {
+    listingApi.deleteListing(req.params.listingId)
+        .then(() => {
+            res.redirect('/agents')
+        })
+})
 
 module.exports = {
     listingRouter

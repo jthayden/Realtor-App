@@ -32,9 +32,24 @@ function addClient(clientObject) {
     return ClientCollection.create(clientObject)
 }
 
+function getClient(clientId) {
+    return ClientCollection.findById(clientId)
+}
+
+function updateClient(clientId, clientObject) {
+    return ClientCollection.findByIdAndUpdate(clientId, clientObject)
+}
+
+function deleteClient(clientId) {
+    return ClientCollection.findByIdAndDelete(clientId)
+}
+
 //Step 5
 //Export all functions from this file by adding their names as keys to this object
 module.exports = {
   getClientByAgentId,
-  addClient
+  addClient,
+  getClient,
+  updateClient,
+  deleteClient
 }

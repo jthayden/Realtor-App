@@ -44,6 +44,7 @@ app.use('/agents', agentRouter)
 app.use('/agents/:agentId/listing', listingRouter)
 app.use('/listings', listingRouter)
 app.use('/agents/:agentId/client', clientRouter)
+app.use('/clients', clientRouter)
 
 //Step 5
 //Set the port the server is to run on

@@ -33,8 +33,8 @@ function updateListing(listingId, listingObject) {
     return ListingCollection.findByIdAndUpdate(listingId, listingObject)
 }
 
-function deleteAgent(agentId) {
-    return AgentCollection.findByIdAndDelete(agentId)
+function deleteListing(listingId) {
+    return ListingCollection.findByIdAndDelete(listingId)
 }
 
 module.exports = {
@@ -43,4 +43,5 @@ module.exports = {
     getListings,
     getListing,
     updateListing,
+    deleteListing
 }

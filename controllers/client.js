@@ -7,6 +7,14 @@ const agentApi = require('../models/agent.js')
 
 const clientRouter = express.Router({ mergeParams: true })
 
+clientRouter.post('/', (req, res) => {
+    req.body.agentId = req.params.agentId
+    clientApi.addClient(req.body)
+        .then(() => {
+            res.redirect('/agents/' + req.params.agentId)
+        })
+})
+
 clientRouter.get('/new', (req, res) => {
     agentApi.getAgent(req.params.agentId)
         .then((agent) => {
@@ -15,13 +23,31 @@ clientRouter.get('/new', (req, res) => {
 
 })
 
+clientRouter.get('/:clientId/edit', (req, res) => {
+    clientApi.getClient(req.params.clientId)
+        .then((client) => {
+            res.render('agents/editClientForm', { client })
+        })
+})
 
+clientRouter.get('/:clientId', (req, res) => {
+    clientApi.getClient(req.params.clientId)
+        .then((client) => {
+            res.render('agents/client', { client })
+        })
+})
 
-clientRouter.post('/', (req, res) => {
-    req.body.agentId = req.params.agentId
-    clientApi.addClient(req.body)
+clientRouter.put('/:clientId', (req, res) => {
+    clientApi.updateClient(req.params.clientId, req.body)
         .then(() => {
-            res.redirect('/agents/' + req.params.agentId)
+            res.redirect('/clients/' + req.params.clientId)
+        })
+})
+
+clientRouter.delete('/:clientId', (req, res) => {
+    clientApi.deleteClient(req.params.clientId)
+        .then(() => {
+            res.redirect('/agents')
         })
 })
 

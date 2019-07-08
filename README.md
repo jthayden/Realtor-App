@@ -11,9 +11,9 @@
 [gitHub Repo](https://github.com/jthayden/Realtor-App)
 
 ### Wireframes:
-![Realtor App](public/images/Agents.png)
-![Realtor App](public/images/Agent.png)
-![Realtor App](public/images/Home_page.png)
+![Realtor App](Public/images/Agents.png)
+![Realtor App](Public/images/Agent.png)
+![Realtor App](Public/images/Home_page.png)
 
 ### ERD:
-![Realtor App](public/images/ERD.png)
+![Realtor App](Public/images/ERD.png)

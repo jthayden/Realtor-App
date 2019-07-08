@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: #5085A5;
+    background-color: #557a96;
     font-family: 'Raleway', sans-serif;
     margin: 15px;
 }
@@ -60,7 +60,7 @@ h4.client {
 }
 
 .flip-card-back {
-    background-color: #F7F9FB;
+    background-color: #bab2b5;
     color: #687864;
     transform: rotateY(180deg);
 }

@@ -110,12 +110,12 @@ h3.agent-card a {
     background: #f7f9fb;
 }
 
-.card li {
+.listing-card li {
     font-size: 12px;
     padding: 2px;
 }
 
-.card a {
+.listing-card a {
     font-size: 18px;
     text-decoration-line: underline;
 }

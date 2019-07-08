@@ -90,7 +90,7 @@ h3.agent-card a {
     color: #687864;
 }
 
-.card {
+#listingCard {
     box-shadow: 0 7px 7px 7px rgba(0, 0, 0, 0.2);
     width: 200px;
     height: 365px;
@@ -100,12 +100,12 @@ h3.agent-card a {
     background: #f7f9fb;
 }
 
-.card li {
+#listingCard li {
     font-size: 12px;
     padding: 2px;
 }
 
-.card a {
+#listingCard a {
     font-size: 18px;
     text-decoration-line: underline;
 }

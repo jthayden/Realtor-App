@@ -22,7 +22,7 @@
 
 <ul>
     {{#each listing}}
-    <div class="card">
+    <div id="listingCard">
         
         <img class="listing" src="https://i.imgur.com/nMvjVCp.png" alt="">
 
@@ -45,7 +45,7 @@
 
 <ul>
     {{#each client}}
-    <div class="card">
+    <div id="clientCard">
         <li><a href="/clients/{{_id}}">{{name}}</a> </li>
         <li>Property Types: {{propertyTypes}}</li>
         <li>Neighborhoods: {{neighborhoods}}</li>

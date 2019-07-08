@@ -60,7 +60,7 @@ h4.client {
 }
 
 .flip-card-back {
-    background-color: #eee2dc;
+    background-color: #f7f9fb;
     color: #687864;
     transform: rotateY(180deg);
 }
@@ -98,7 +98,7 @@ h3.agent-card a {
     margin: 13px;
     text-align: center;
     display: inline-flex;
-    background: #eee2dc;
+    background: #f7f9fb;
 }
 
 .card li {

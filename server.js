@@ -29,7 +29,7 @@ app.use(methodOverride('_method'))
 
 //Step 3.c
 //use the `./public` directory to host static resources such as css and image files 
-app.use(express.static(__dirname + '/'))
+app.use(express.static(__dirname + '/public'))
 
 //Step 3.b
 //Set the view engine of express to use the hbs (handlebars) package

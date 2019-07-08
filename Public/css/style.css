@@ -98,17 +98,19 @@ h3.agent-card a {
     margin: 13px;
     text-align: center;
     display: inline-flex;
-    background: #f7f9fb;
+    background: #eee2dc;
 }
 
 .card li {
     font-size: 12px;
     padding: 2px;
+    color: #687864;
 }
 
 .card a {
     font-size: 18px;
     text-decoration-line: underline;
+    color: #687864;
 }
 
 image.listing {

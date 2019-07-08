@@ -17,7 +17,7 @@ const { clientRouter } = require('./controllers/client.js')
 
 //Step 3.a
 //...to parse the body of the HTTP requests from a URL encoded string
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 
 //Step 3.b 
 //...to parse the body of the HTTP requests from a JSON string  
@@ -29,9 +29,9 @@ app.use(methodOverride('_method'))
 
 //Step 3.c
 //use the `./public` directory to host static resources such as css and image files 
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/Public'))
 
-//Step 3.b
+//Step 3b
 //Set the view engine of express to use the hbs (handlebars) package
 app.set('view engine', 'hbs')
 
@@ -48,7 +48,7 @@ app.use('/clients', clientRouter)
 
 //Step 5
 //Set the port the server is to run on
-const PORT = process.env.PORT || 3000 
+const PORT = process.env.PORT || 3000
 
 //Step 6
 //Start the server

@@ -154,4 +154,5 @@ form {
   input {
     margin: 10px 0 10px 0;
     width: 53%;
+    max-width: 500px;
 }

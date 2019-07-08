@@ -1,4 +1,4 @@
-<a class="btn btn-outline-secondary non-group-button" href="/agents/{{agent._id}}">Back to agent</a>
+<a class="btn btn-outline-light non-group-button" href="/agents/{{agent._id}}">Back to agent</a>
 
 <h2>Edit Agent</h2>
 
@@ -11,7 +11,7 @@ name="name"
 id="name"
 value="{{agent.name}}"
 >
-
+<br>
 <label for="specialty">Specialty</label>
 <input 
 type="text" 
@@ -19,7 +19,7 @@ name="specialty"
 id="specialty"
 value="{{agent.specialty}}"
 >
-
+<br>
 <label for="areas-served">Areas Served:</label>
 <input 
 type="text" 
@@ -27,7 +27,7 @@ name="areasServed"
 id="areas-served"
 value="{{agent.areasServed}}"
 >
-
+<br>
 <label for="team">Team:</label>
 <input 
 type="text" 
@@ -35,6 +35,6 @@ name="team"
 id="team"
 value="{{agent.team}}"
 >
-
+<br>
 <input type="submit" class="btn btn-outline-success non-group-button" value="Update Agent" />
 </form>

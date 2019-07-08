@@ -1,40 +1,20 @@
-<a class="btn btn-outline-secondary non-group-button" href="/agents">Back to all agents</a>
+<a class="btn btn-outline-light non-group-button" href="/agents">Back to all agents</a>
 
-<h1>New Agent</h1>
+<h2>New Agent</h2>
 
-<form method="POST" action="/agents">
+  <form method="POST" action="/agents">
 
-  <label for="name">Agent Name:</label>
-  <input 
-  type="text" 
-  name="name" 
-  id="name" 
-  placeholder="name"
-  >
-
-  <label for="specialty">Specialty</label>
-  <input 
-  type="text" 
-  name="specialty" 
-  id="specialty" 
-  placeholder="specialty"
-  >
-
-  <label for="areas-served">Areas Served:</label>
-  <input 
-  type="text" 
-  name="areasServed" 
-  id="areas-served" 
-  placeholder="Areas Served"
-  >
-
-  <label for="team">Team:</label>
-  <input 
-  type="text" 
-  name="team" 
-  id="team" 
-  placeholder="team"
-  >
-
-  <input type="submit" class="btn btn-outline-success non-group-button" value="Create Agent" />
-</form>
+    <label for="name">Agent Name: </label>
+    <input type="text" name="name" id="name" placeholder="name">
+    <br>
+    <label for="specialty">Specialty: </label>
+    <input type="text" name="specialty" id="specialty" placeholder="specialty">
+    <br>
+    <label for="areas-served">Areas Served: </label>
+    <input type="text" name="areasServed" id="areas-served" placeholder="Areas Served">
+    <br>
+    <label for="team">Team: </label>
+    <input type="text" name="team" id="team" placeholder="team">
+    <br>
+    <input type="submit" class="btn btn-outline-success non-group-button" value="Create Agent" />
+  </form>

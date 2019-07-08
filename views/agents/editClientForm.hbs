@@ -1,4 +1,4 @@
-<a class="btn btn-outline-secondary non-group-button" href="/agents/{{agentId}}">Back to agent</a>
+<a class="btn btn-outline-light non-group-button" href="/agents/{{agentId}}">Back to agent</a>
 
 <h2>Edit Client</h2>
 
@@ -6,27 +6,27 @@
 
     <label for="name">Name</label>
     <input type="text" name="name" id="name" value="{{client.name}}">
-
+    <br>
     <label for="property-types">Property Types</label>
     <input type="text" name="propertyTypes" id="property-types" value="{{client.propertyTypes}}">
-
+    <br>
     <label for="neighborhoods">Neighborhoods</label>
     <input type="text" name="neighborhoods" id="neighborhoods" value="{{client.neighborhoods}}">
-
+    <br>
     <label for="price-range">Price Range</label>
     <input type="text" name="priceRange" id="price-range" value="{{client.priceRange}}">
-
+    <br>
     <label for="beds">Beds</label>
     <input type="number" name="beds" id="beds" value="{{client.beds}}">
-
+    <br>
     <label for="baths">Baths</label>
     <input type="number" name="baths" id="baths" value="{{client.baths}}">
-
+    <br>
     <label for="email">Email</label>
     <input type="email" name="email" id="email" value="{{client.email}}">
-
+    <br>
     <label for="phone">Phone</label>
     <input type="tel" name="phone" id="phone" value="{{client.phone}}">
-<br>
+    <br>
     <input type="submit" class="btn btn-outline-success non-group-button" value="Edit Client" />
 </form>

@@ -1,15 +1,32 @@
 body {
     text-align: center;
-    background-color: lightgray
+    background-color: #5085A5;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2  {
+    color: #f7f9fb;
+    margin: 20px;
+}
+
+h3.agent {
+    margin-top: 15px;
+}
+
+h3.listing {
+    margin-top: 15px;
+}
+
+h3.client {
+    margin-top: 15px;
 }
 
 .flip-card {
     background-color: transparent;
     width: 200px;
     height: 200px;
-    /* border: 1px solid #f1f1f1; */
     perspective: 1000px;
-    display:inline-flex;
+    display: inline-flex;
     margin: inherit
 }
 
@@ -39,15 +56,14 @@ body {
 }
 
 .flip-card-back {
-    background-color: navy;
-    color: white;
+    background-color: #F7F9FB;
+    color: #687864;
     transform: rotateY(180deg);
 }
 
 ul {
     list-style: none;
 }
-
 
 h3.agent-card {
     font-size: 18px;
@@ -60,6 +76,49 @@ h5.agent-card {
 a.non-group-button {
     margin: 15px;
 }
- input.non-group-button {
-     margin: 15px;
+
+input.non-group-button {
+    margin: 15px;
+}
+
+h3.agent-card a {
+    text-decoration: underline;
+    font-size: 22px;
+    color: #687864;
+}
+
+.card {
+    box-shadow: 0 7px 7px 7px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 350px;
+    margin: 13px;
+    text-align: center;
+    display: inline-flex
+}
+
+.card li {
+    font-size: 12px;
+    padding: 2px;
+}
+
+.card a {
+    font-size: 18px;
+    text-decoration-line: underline;
+}
+
+image.listing {
+    align-items: center;
+}
+ hr {
+     width: 85%;
+     margin-top: 40px;
+     margin-bottom: 10px;
+     border-top: 2px solid rgba(0,0,0,.2)
+ }
+ input {
+     margin: 10px 0 10px 0;
+ }
+
+ .btn-group {
+     display: inline-grid;
  }

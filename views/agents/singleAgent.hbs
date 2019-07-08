@@ -1,51 +1,59 @@
-<a class="btn btn-outline-secondary non-group-button" href="/agents">Back to all agents</a>
+<a class="btn btn-outline-light non-group-button" href="/agents">Back to all agents</a>
 <br>
-<img src="https://i.imgur.com/sUN5Yyum.jpg?2" class="img-thumbnail" alt="">
+
+<img src="https://i.imgur.com/pIbaozvh.jpg?1" class="img-thumbnail" style="width: 300px; height:300px;" alt="">
 <h3 class="agent">{{agent.name}}</h3>
-<p class="agent">Specialty:{{agent.specialty}}</p>
-<p class="agent">Areas Served:{{agent.areasServed}}</p>
-<p class="agent">Team:{{agent.team}}</p>
+<p class="agent">Specialty: {{agent.specialty}}</p>
+<p class="agent">Areas Served: {{agent.areasServed}}</p>
+<p class="agent">Team: {{agent.team}}</p>
 
 <div class="btn-group" role="group" aria-label="Basic example">
-    <a class="btn btn-outline-secondary" href="/agents/{{agent._id}}/edit">Edit Agent</a>
+    <a class="btn btn-outline-light" href="/agents/{{agent._id}}/edit">Edit Agent</a>
     <form action="/agents/{{agent._id}}?_method=DELETE" method="post">
         <input type="submit" class="btn btn-outline-danger" value="Delete Agent">
     </form>
 </div>
 
-{{!-- <a class="btn btn-outline-secondary" href="/agents/{{agent._id}}/edit">Edit Agent</a> --}}
+<hr>
 
-{{!-- <form action="/agents/{{agent._id}}?_method=DELETE" method="post">
-    <input type="submit" class="btn btn-outline-danger" value="Delete Agent">
-</form> --}}
-<br>
-<a class="btn btn-outline-secondary non-group-button" href="/agents/{{agent._id}}/listing/new">New Listing Form</a>
+
 
 <h3>Listings</h3>
 
 <ul>
     {{#each listing}}
-   
-    <li>Address:<a href="/listings/{{_id}}">{{address}}</a> </li>
-    <li>Neighborhoods: {{neighborhood}}</li>
-    <li>Bedrooms: {{beds}}</li>
-    <li>Bathrooms: {{baths}}</li>
-    <li>Square Footage: {{squareFootage}}</li>
-    <li>Price: {{price}}</li>
+    <div class="card">
+        <img class="listing" src="https://i.imgur.com/IvY8JEKb.jpg?1" alt="" style="100%">
+
+        <li><a href="/listings/{{_id}}">{{address}}</a> </li>
+        <li>Neighborhood: {{neighborhood}}</li>
+        <li>Bedrooms: {{beds}}</li>
+        <li>Bathrooms: {{baths}}</li>
+        <li>Square Footage: {{squareFootage}}</li>
+        <li>Price: ${{price}}</li>
+    </div>
     {{/each}}
 </ul>
 
-<a class="btn btn-outline-secondary non-group-button" href="/agents/{{agent._id}}/client/new">New Client Form</a>
+<a class="btn btn-outline-light non-group-button" href="/agents/{{agent._id}}/listing/new">New Listing Form</a>
+
+<hr>
+
+<h3>Clients</h3>
 
 <ul>
     {{#each client}}
-    <li>Name:<a href="/clients/{{_id}}">{{name}}</a> </li>
-    <li>Property Types: {{propertyTypes}}</li>
-    <li>Neighborhoods: {{neighborhoods}}</li>
-    <li>Price Range: {{priceRange}}</li>
-    <li>Beds: {{beds}}</li>
-    <li>Baths: {{baths}}</li>
-    <li>Email: {{email}}</li>
-    <li>Phone: {{phone}}</li>
+    <div class="card">
+        <li><a href="/clients/{{_id}}">{{name}}</a> </li>
+        <li>Property Types: {{propertyTypes}}</li>
+        <li>Neighborhoods: {{neighborhoods}}</li>
+        <li>Price Range: {{priceRange}}</li>
+        <li>Beds: {{beds}}</li>
+        <li>Baths: {{baths}}</li>
+        <li>Email: {{email}}</li>
+        <li>Phone: {{phone}}</li>
+    </div>
     {{/each}}
 </ul>
+
+<a class="btn btn-outline-light non-group-button" href="/agents/{{agent._id}}/client/new">New Client Form</a>

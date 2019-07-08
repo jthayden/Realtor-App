@@ -110,6 +110,11 @@ image.listing {
     align-items: center;
 }
 
+image.img-thumbnail {
+    width: 500px;
+    height: 500px;
+}
+
 hr {
     width: 85%;
     margin-top: 40px;

@@ -110,7 +110,7 @@ image.listing {
     align-items: center;
 }
 
-image.img-thumbnail {
+.img-thumbnail {
     width: 500px;
     height: 500px;
 }

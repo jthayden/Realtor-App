@@ -90,13 +90,24 @@ h3.agent-card a {
     color: #687864;
 }
 
-.card {
+.listing-card {
+    box-shadow: 0 7px 7px 7px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 365px;
+    margin: 13px;
+    text-align: center;
+    display: inline-flex;
+    background: #f7f9fb;
+}
+
+.client-card {
     box-shadow: 0 7px 7px 7px rgba(0, 0, 0, 0.2);
     width: 200px;
     height: 350px;
     margin: 13px;
     text-align: center;
-    display: inline-flex
+    display: inline-flex;
+    background: #f7f9fb;
 }
 
 .card li {

@@ -4,7 +4,7 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-h2  {
+h2 {
     color: #f7f9fb;
     margin: 20px;
 }
@@ -109,16 +109,24 @@ h3.agent-card a {
 image.listing {
     align-items: center;
 }
- hr {
-     width: 85%;
-     margin-top: 40px;
-     margin-bottom: 10px;
-     border-top: 2px solid rgba(0,0,0,.2)
- }
- input {
-     margin: 10px 0 10px 0;
- }
 
- .btn-group {
-     display: inline-grid;
- }
+hr {
+    width: 85%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-top: 2px solid rgba(0, 0, 0, .2)
+}
+
+input {
+    margin: 10px 0 10px 0;
+}
+
+.btn-group {
+    display: inline-grid;
+}
+
+img.listing {
+    width: 195px;
+    height: 195px;
+    align-self: center;
+}

@@ -1,4 +1,4 @@
-<a class="btn btn-outline-light non-group-button" href="/agents">Back to all agents</a>
+<a class="btn btn-outline-light non-group-button" href="/agents">Back to agents</a>
 <br>
 
 <img src="https://i.imgur.com/pIbaozvh.jpg?1" class="img-thumbnail" style="width: 300px; height:300px;" alt="">
@@ -23,7 +23,8 @@
 <ul>
     {{#each listing}}
     <div class="card">
-        <img class="listing" src="https://i.imgur.com/IvY8JEKb.jpg?1" alt="" style="100%">
+        
+        <img class="listing" src="https://i.imgur.com/nMvjVCp.png" alt="">
 
         <li><a href="/listings/{{_id}}">{{address}}</a> </li>
         <li>Neighborhood: {{neighborhood}}</li>
@@ -35,7 +36,7 @@
     {{/each}}
 </ul>
 
-<a class="btn btn-outline-light non-group-button" href="/agents/{{agent._id}}/listing/new">New Listing Form</a>
+<a class="btn btn-outline-light non-group-button" href="/agents/{{agent._id}}/listing/new">New Listing</a>
 
 <hr>
 
@@ -56,4 +57,4 @@
     {{/each}}
 </ul>
 
-<a class="btn btn-outline-light non-group-button" href="/agents/{{agent._id}}/client/new">New Client Form</a>
+<a class="btn btn-outline-light non-group-button" href="/agents/{{agent._id}}/client/new">New Client</a>

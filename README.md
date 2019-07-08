@@ -1,5 +1,5 @@
 # Project 2
-## Realtor App
+## Realtor App by John Hayden
 
 ### To view app, please visit:
 [Realtor App](https://limitless-plateau-74542.herokuapp.com/agents)

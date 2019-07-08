@@ -1,8 +1,7 @@
 //Import the mongoose module
 const mongoose = require('mongoose');
 
-//Step 1.
-//Replace <db-name> with the name of your mongo database. 
+//Step 1
 const connectionString = process.env.MONGODB_URI || "mongodb://localhost/agentportfolios";
 
 

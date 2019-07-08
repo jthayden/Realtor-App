@@ -140,3 +140,9 @@ img.listing {
     height: 195px;
     align-self: center;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }

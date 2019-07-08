@@ -3,6 +3,7 @@ const mongoose = require('./connection.js')
 const ListingSchema = new mongoose.Schema({
     address: String,
     neighborhood: String,
+    propertyType: String,
     beds: Number,
     baths: Number,
     squareFootage: Number,

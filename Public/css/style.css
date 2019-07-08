@@ -90,7 +90,7 @@ h3.agent-card a {
     color: #687864;
 }
 
-.listing-card {
+.card {
     box-shadow: 0 7px 7px 7px rgba(0, 0, 0, 0.2);
     width: 200px;
     height: 365px;
@@ -100,22 +100,12 @@ h3.agent-card a {
     background: #f7f9fb;
 }
 
-.client-card {
-    box-shadow: 0 7px 7px 7px rgba(0, 0, 0, 0.2);
-    width: 200px;
-    height: 350px;
-    margin: 13px;
-    text-align: center;
-    display: inline-flex;
-    background: #f7f9fb;
-}
-
-.listing-card li {
+.card li {
     font-size: 12px;
     padding: 2px;
 }
 
-.listing-card a {
+.card a {
     font-size: 18px;
     text-decoration-line: underline;
 }

@@ -139,7 +139,7 @@ img.listing {
     align-self: center;
 }
 
-form {
+form.non-button {
     display: flex;
     flex-direction: column;
     height: 100%;

@@ -4,40 +4,20 @@
 
 <form class="non-button" method="POST" action="/agents/{{agent._id}}?_method=PUT">
 
-<label for="name">Agent Name: </label>
-<input 
-type="text" 
-name="name" 
-id="name"
-value="{{agent.name}}"
->
-<br>
-<label for="specialty">Specialty: </label>
-<input 
-type="text" 
-name="specialty" 
-id="specialty"
-value="{{agent.specialty}}"
->
-<br>
-<label for="areas-served">Areas Served: </label>
-<input 
-type="text" 
-name="areasServed" 
-id="areas-served"
-value="{{agent.areasServed}}"
->
-<br>
-<label for="team">Team: </label>
-<input 
-type="text" 
-name="team" 
-id="team"
-value="{{agent.team}}"
->
-<br>
-<input type="submit" class="btn btn-outline-success non-group-button" value="Update Agent" />
+    <label for="name">Agent Name: </label>
+    <input type="text" name="name" id="name" value="{{agent.name}}">
+    <br>
+    <label for="specialty">Specialty: </label>
+    <input type="text" name="specialty" id="specialty" value="{{agent.specialty}}">
+    <br>
+    <label for="areas-served">Areas Served: </label>
+    <input type="text" name="areasServed" id="areas-served" value="{{agent.areasServed}}">
+    <br>
+    <label for="team">Team: </label>
+    <input type="text" name="team" id="team" value="{{agent.team}}">
+    <br>
+    <input type="submit" class="btn btn-outline-success non-group-button" value="Update Agent" />
 </form>
- <form action="/agents/{{agent._id}}?_method=DELETE" method="post">
-        <input type="submit" class="btn btn-outline-danger" value="Delete Agent">
-    </form>
+<form action="/agents/{{agent._id}}?_method=DELETE" method="post">
+    <input type="submit" class="btn btn-outline-danger" value="Delete Agent">
+</form>

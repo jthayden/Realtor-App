@@ -60,7 +60,7 @@ h4.client {
 }
 
 .flip-card-back {
-    background-color: #bab2b5;
+    background-color: #eee2dc;
     color: #687864;
     transform: rotateY(180deg);
 }

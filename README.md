@@ -8,9 +8,9 @@
 [Realtor App Project Board](https://trello.com/b/1UQlj5ct/realtor-app)
 
 ### Wireframes:
-![Realtor App](Public/images/Agents.png)
-![Realtor App](Public/images/Agent.png)
-![Realtor App](Public/images/Home_page.png)
+![Realtor App](public/images/Agents.png)
+![Realtor App](public/images/Agent.png)
+![Realtor App](public/images/Home_page.png)
 
 ### ERD:
-![Realtor App](Public/images/ERD.png)
+![Realtor App](public/images/ERD.png)

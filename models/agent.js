@@ -1,5 +1,3 @@
-//Place all functions, classes, and/or DB schemas here for a single model.
-
 //Step 1
 //Import mongoose connection
 const mongoose = require('./connection.js')
@@ -7,10 +5,10 @@ const mongoose = require('./connection.js')
 //Step 2
 //Create model schema 
 const AgentSchema = new mongoose.Schema({
- name: String,
- specialty: String,
- areasServed: String,
- team: {},
+  name: String,
+  specialty: String,
+  areasServed: String,
+  team: {},
 })
 
 //Step 3

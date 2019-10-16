@@ -18,7 +18,6 @@ listingRouter.get('/', (req, res) => {
 
 listingRouter.post('/', (req, res) => {
     req.body.agentId = req.params.agentId
-    // console.log(req.params.agentId)
     listingApi.addListing(req.body)
         .then(() => {
             res.redirect('/agents/' + req.params.agentId)

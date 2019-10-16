@@ -147,13 +147,13 @@ form.non-button {
     height: 100%;
     width: 100%;
     align-items: center;
-  }
+}
 
-  label{
-      margin-bottom: -0.5rem;
-  }
+label{
+    margin-bottom: -0.5rem;
+}
 
-  input {
+input {
     margin: 10px 0 10px 0;
     width: 53%;
     max-width: 500px;

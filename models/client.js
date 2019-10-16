@@ -1,5 +1,3 @@
-//Place all functions, classes, and/or DB schemas here for a single model.
-
 //Step 1
 //Import mongoose connection
 const mongoose = require('./connection.js')
@@ -7,15 +5,15 @@ const mongoose = require('./connection.js')
 //Step 2
 //Create model schema 
 const ClientSchema = new mongoose.Schema({
- name: String,
- propertyTypes: String,
- neighborhoods: String,
- priceRange: String,
- beds: Number,
- baths: Number,
- email: String,
- phone: String,
- agentId: { type:mongoose.Types.ObjectId, required: true}
+    name: String,
+    propertyTypes: String,
+    neighborhoods: String,
+    priceRange: String,
+    beds: Number,
+    baths: Number,
+    email: String,
+    phone: String,
+    agentId: { type:mongoose.Types.ObjectId, required: true}
 })
 
 //Step 3
@@ -47,9 +45,9 @@ function deleteClient(clientId) {
 //Step 5
 //Export all functions from this file by adding their names as keys to this object
 module.exports = {
-  getClientByAgentId,
-  addClient,
-  getClient,
-  updateClient,
-  deleteClient
+    getClientByAgentId,
+    addClient,
+    getClient,
+    updateClient,
+    deleteClient
 }

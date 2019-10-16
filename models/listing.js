@@ -15,7 +15,7 @@ const ListingCollection = mongoose.model('Listing', ListingSchema)
 
 function getListings() {
     return ListingCollection.find()
-  }
+}
 
 function getListingByAgentId(agentId) {
     return ListingCollection.find({ agentId: agentId  })
